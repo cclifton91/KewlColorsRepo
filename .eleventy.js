@@ -19,11 +19,21 @@ module.exports = function (config) {
 	//Responsive Picture
 	config.addPlugin(responsivePicturePlugin, {
 		ratios: [2, 1],
-		sources: [
-			{ media: "(min-width: 1024px)", size: 824 },
-			{ media: "(min-width: 768px)", size: 696 },
-			{ media: "(min-width: 420px)", size: 568 },
-			{ size: 348 },
+		sources: [{
+				media: "(min-width: 1024px)",
+				size: 824
+			},
+			{
+				media: "(min-width: 768px)",
+				size: 696
+			},
+			{
+				media: "(min-width: 420px)",
+				size: 568
+			},
+			{
+				size: 348
+			},
 		],
 		fallback: (src) => `${src}?w=1000`,
 		resize: (src, width) => `${src}?w=${size}`,
@@ -42,6 +52,8 @@ module.exports = function (config) {
 	/**Eleventy Configuration **/
 	config.addPassthroughCopy("manifest.json");
 	config.addPassthroughCopy("./assets/images");
+	config.addPassthroughCopy("style-guide");
+	config.addPassthroughCopy("admin");
 	return {
 		passthroughFileCopy: true,
 		markdownTemplateEngine: "njk",
