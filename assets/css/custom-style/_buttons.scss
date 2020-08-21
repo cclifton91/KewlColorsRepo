@@ -1,0 +1,91 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/buttons
+
+// --------------------------------
+
+.btn {
+  --btn-font-size: 1em;
+  --btn-padding-x: var(--space-md);
+  --btn-padding-y: var(--space-xxs);
+  --btn-radius: 50px;
+  cursor: pointer;
+  font-family: var(undefined);
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1.4;
+  @include fontSmooth;
+  box-shadow: 0px 2px 8px 0 alpha(var(--color-black), 0.12), 0px 1px 1px 0 alpha(var(--color-black), 0.12);
+  transition: all 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0 alpha(var(--color-black), 0.12), 0px 1px 1px 0 alpha(var(--color-black), 0.12);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+// themes
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
+  }
+}
+
+.btn--subtle {
+  background-color: var(--color-contrast-lower);
+  color: var(--color-contrast-higher);
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-accent-dark);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+  }
+}
+
+// feedback
+.btn--disabled, .btn[disabled], .btn[readonly] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// size
+.btn--sm {
+  font-size: 0.8em;
+}
+
+.btn--md {
+  font-size: 1.2em;
+}
+
+.btn--lg {
+  font-size: 1.4em;
+}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------

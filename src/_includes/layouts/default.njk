@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#f5f55"/>
+        {% seo "" %}
+        <script>
+            document
+                .getElementsByTagName("html")[0]
+                .className += " js";
+        </script>
+        <!-- set the css that is built in the includes folder-->
+        {% set css%}{% include "css/style.css" %}{% endset %}
+        <!-- feed it through the filter -->
+        <style>
+            {{css | cssmin | safe}}
+        </style>
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/16.png"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <!-- browsers not supporting CSS variables -->
+        <title></title>
+    </head>
+    <body>
+
+        {{ content | safe }}
+        <script>
+            {% include "js/scripts.js" %}
+        </script>
+    </body>
+</html>
