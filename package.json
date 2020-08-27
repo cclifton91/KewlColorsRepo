@@ -25,7 +25,6 @@
 		"clean-css": "^4.2.3",
 		"dotenv": "^8.2.0",
 		"eleventy-plugin-pwa": "^1.0.8",
-		"eleventy-plugin-responsive-picture": "^1.0.0",
 		"eleventy-plugin-seo": "^0.5.1"
 	}
 }
