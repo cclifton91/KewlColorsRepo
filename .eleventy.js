@@ -1,7 +1,7 @@
 const pluginPWA = require("eleventy-plugin-pwa");
 const cleanCSS = require("clean-css");
 const pluginSEO = require("eleventy-plugin-seo");
-
+const localImages = require('eleventy-plugin-local-images');
 
 module.exports = function (config) {
 	/**Plugins **/
@@ -17,7 +17,12 @@ module.exports = function (config) {
 		return new cleanCSS({}).minify(code).styles;
 	});
 	//Responsive Image
-	
+	config.addPlugin(localImages, {
+		distPath: "_site",
+		assetPath: "/assets/img",
+		selector: "img",
+		verbose: false,
+	});
 	//SEO
 	config.addPlugin(pluginSEO, require("./src/_data/seo.json"));
 
