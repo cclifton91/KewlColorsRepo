@@ -17,11 +17,11 @@ Usage: codyhouse.co/license
   margin-bottom: var(--space-sm);
 
   a {
-    color: var(--color-contrast-high);
+    color: var(--color-white);
     font-size: 1.25em;
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-contrast-high);
     }
   }
 }
