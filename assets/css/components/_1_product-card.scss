@@ -36,13 +36,13 @@ Usage: codyhouse.co/license
   z-index: 1;
   top: var(--space-sm);
   right: var(--space-sm);
-  background-color: alpha(var(--color-bg), 0.95);
+  background-color: var(--color-accent);
   padding: var(--space-xxs) var(--space-sm);
 
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-contrast-medium);
+  color: var(--color-white);
   font-weight: 500;
 }
 

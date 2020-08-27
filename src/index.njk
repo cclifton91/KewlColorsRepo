@@ -2,13 +2,14 @@
 title: Home
 layout: layouts/default.njk 
 ---
+<!--HERO-->
 <section class="feature-v4 margin-top-xxl margin-top-0@md">
   <div class="container max-width-adaptive-lg">
     <div class="feature-v4__grid grid gap-md items-center">
       <div class="col-5@md position-relative z-index-1 padding-left-lg@md">
 
         <div class="text-component text-center text-left@md">
-          <h1 class="text-xxxxl feature-v4__text-offset@md color-primary">Your Style, <br>Customized.</h1>
+          <h1 class="text-xxxxl feature-v4__text-offset@md color-primary">Your Style, <br>Customized .</h1>
           <p class="color-primary">The best looking kicks, caps, and accessories all handpainted and customized just for you.</p>
         </div>
 
@@ -27,3 +28,77 @@ layout: layouts/default.njk
     </div>
   </div>
 </section>
+<!--HERO-->
+<!--BESTSELLER-->
+<section class="products-gallery padding-y-lg bg-primary">
+  <div class="container max-width-adaptive-lg">
+    <div class="margin-bottom-xl padding-top-xl">
+      <div class="flex flex-center">
+        <h1 class="color-white">Best Sellers</h1>
+      </div>
+    </div>
+
+    <div class="grid gap-md">
+      <div class="prod-card col-4@md">
+        <span class="prod-card__badge" role="text">Best Seller <i class="sr-only">product</i></span>
+
+        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
+          <figure class="prod-card__img ">
+            <img src="/assets/img/ProductFeatureImg1.jpg" alt="Photo of hand painted graduation Cap">
+          </figure>
+        </a>
+
+        <div class="prod-card__content text-center">
+          <h3 class="color-white"><a href="#0">Graduation Caps</a></h3>
+
+          <div class="margin-top-xs">
+            {% if sale %}
+            <del class="prod-card__price prod-card__price--old color-white">$79</del> 
+            {% endif %}
+            <ins class="prod-card__price prod-card__price--new color-white">$49</ins>
+          </div>
+        </div>
+      </div>
+  
+      <div class="prod-card col-4@md">
+        <span class="prod-card__badge" role="text">New <i class="sr-only">product</i></span>
+
+        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
+          <figure class="prod-card__img media-wrapper media-wrapper--4:3">
+            <img src="../../../app/assets/img/products-gallery-img-2.jpg" alt="Product preview image">
+          </figure>
+        </a>
+
+        <div class="prod-card__content text-center">
+          <h3><a href="#0">Product Two</a></h3>
+
+          <div class="margin-top-xs">
+            <span class="prod-card__price">$79</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="prod-card col-4@md">
+        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
+          <figure class="prod-card__img media-wrapper media-wrapper--4:3">
+            <img src="../../../app/assets/img/products-gallery-img-3.jpg" alt="Product preview image">
+          </figure>
+        </a>
+
+        <div class="prod-card__content text-center">
+          <h3><a href="#0">Product Three</a></h3>
+
+          <div class="margin-top-xs" role="text">
+            <del class="prod-card__price prod-card__price--old">$79</del> 
+            <ins class="prod-card__price prod-card__price--new">$49</ins>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="margin-top-lg hide@md">
+      <a href="#0" class="btn btn--subtle btn--md width-100%">View all products</a>
+    </div>
+  </div>
+</section>
+<!--BESTSELLER-->
