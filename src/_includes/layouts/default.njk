@@ -61,6 +61,42 @@
         <main>
              {{ content | safe }}
         </main>
+        <!-- FOOTER --> 
+        <section class="contact-v2 has-section-divider-top bg-secondary">
+            <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="var(--color-bg)" d="M-153.5,85.5a4002.033,4002.033,0,0,1,658-71c262.854-6.5,431.675,15.372,600,27,257.356,17.779,624.828,19.31,1089-58v102Z"/></svg>
+        <div class="container max-width-xs margin-bottom-lg padding-y-xxl">
+            <div class="text-component text-center color-white">
+            <h2 class="color-white">Get In Touch</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus eos impedit nesciunt voluptates magni vero itaque.</p>
+            </div>
+        </div>
+
+        <div class="container max-width-lg">
+            <dl class="details-list-v2 details-list-v2--cols margin-bottom-lg">
+            <div class="details-list-v2__item color-white">
+                <dt class="details-list-v2__dt">Address</dt>
+                <dd class="details-list-v2__dd">
+                86  Whitby Road <br>IP20 6JA <br>London, UK
+                </dd>
+            </div>
+
+            <div class="details-list-v2__item color-white">
+                <dt class="details-list-v2__dt">Email</dt>
+                <dd class="details-list-v2__dd">
+                <a href='mailto:webmaster@example.com'>hello@myemail.com</a>
+                </dd>
+            </div>
+
+            <div class="details-list-v2__item color-white">
+                <dt class="details-list-v2__dt">Phone</dt>
+                <dd class="details-list-v2__dd">
+                <a href='tel:+44 7656 6455'>+44 7656 6455</a> <br><small class='color-contrast-low'>Mon - Fri, 9AM - 5PM</small>
+                </dd>
+            </div>
+            </dl>
+        </div>
+        
+        
         <footer class="footer-v4 padding-y-lg bg-secondary">
             <div class="container max-width-lg">
                 <nav class="footer-v4__nav">
@@ -96,9 +132,11 @@
                 </a>
                 </div>
             </div>
-        </footer>
+         </footer>
+        </section>
         <script>
             {% include "js/scripts.js" %}
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" integrity="sha512-LfB+BcvR3zBt7ebVskhSWiSbEUiG3p5EcCprkieldsKhBeR6wpnLi0VpWC2GNgVGWP2n/skO8Bx2oKNjUhXCkw==" crossorigin="anonymous"></script>
     </body>
 </html>
