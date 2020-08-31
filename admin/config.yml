@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+collections:
+  - name: 'products'
+    label: 'Products'
+    folder: 'products'
+    create: true
+    fields:
+      - { label: 'Name', name: 'title', widget: 'string' }
+      - { label: 'Price', name: 'price', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+        label: 'Layout',
+        name: 'layout',
+        widget: 'hidden',
+        default: 'layouts/default.njk'
+      }
+media_folder: "assets/img"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: clifton-creative
+    api_key: 489455415733233
+    default_transformations:
+      - fetch_format: auto
+        quality: auto
+        width: 400
+        crop: scale
