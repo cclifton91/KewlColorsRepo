@@ -4,7 +4,7 @@ const pluginSEO = require("eleventy-plugin-seo");
 
 
 module.exports = function (config) {
-	/**Plugins **/
+	/** PLUGINS **/
 	//PWA
 	config.addPlugin(pluginPWA, {
 		swDest: "./_site/service-worker.js",
@@ -16,12 +16,27 @@ module.exports = function (config) {
 	config.addFilter("cssmin", function (code) {
 		return new cleanCSS({}).minify(code).styles;
 	});
-	//Responsive Image
-	
 	//SEO
 	config.addPlugin(pluginSEO, require("./src/_data/seo.json"));
+	
+	/** COLECTIONS **/
+	//Adds data dump functionality
+	config.addFilter("dump", (obj) => {
+		return util.inspect(obj);
+	});
+	// Returns a collection of blog products in reverse date order
+	config.addCollection("products", (collection) => {
+		return [...collection.getFilteredByGlob("./src/products/*.md")];
+	});
+	// Returns the products collection but filters out all those that have featured set to true
+	config.addCollection("bestseller", (collection) => {
+		return collection
+			.getFilteredByGlob("./posts/*.md")
+			.filter((x) => x.data.bestseller)
+			.slice(0, 3);
+	});
 
-	/**Eleventy Configuration **/
+	/** ELEVENTY CONFIG **/
 	config.addPassthroughCopy("manifest.json");
 	config.addPassthroughCopy({ "src/_assets/img": "assets/img" });
 	config.addPassthroughCopy({ "src/_assets/icons": "assets/icons" });

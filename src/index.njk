@@ -6,14 +6,14 @@ layout: layouts/default.njk
 <section class="feature-v4 margin-top-xxl margin-top-0@md">
   <div class="container max-width-adaptive-lg">
     <div class="feature-v4__grid grid gap-md items-center">
-      <div class="col-5@md position-relative z-index-1 padding-left-lg@md">
+      <div class="col-5@md position-relative z-index-1">
 
-        <div class="text-component text-center text-left@md">
+        <div class="text-component text-center text-left@lg">
           <h1 class="text-xxxxl feature-v4__text-offset@md color-primary">Your Style, <br>Customized .</h1>
-          <p class="color-primary">The best looking kicks, caps, and accessories all handpainted and customized just for you.</p>
+          <p class="color-primary text-md">The best looking kicks, caps, and accessories all handpainted and customized just for you.</p>
         </div>
 
-        <div class="margin-top-md">
+        <div class="margin-top-sm">
           <div class="flex flex-wrap gap-sm flex-column flex-row@md padding-x-lg padding-x-0@md">
             <a href="#0" class="btn btn--primary">Shop</a>
           </div>
@@ -22,7 +22,7 @@ layout: layouts/default.njk
 
       <div class="col-7@md">
         <figure>
-          
+          <img src="/assets/img/heroimg.png?nf_resize=fit&w=600" alt="Vans shoes painted with donut sprinkles">
         </figure>
       </div>
     </div>
@@ -39,61 +39,29 @@ layout: layouts/default.njk
     </div>
 
     <div class="grid gap-md">
+    <pre>{{ collections.bestseller | dump }}</pre>
+    {% for product in collections.bestseller %}
       <div class="prod-card col-4@md">
         <span class="prod-card__badge" role="text">Best Seller <i class="sr-only">product</i></span>
 
         <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
           <figure class="prod-card__img">
-           <!--Img Cloudnary Here-->
+           <img src="{{ product.data.img}}" alt="{{product.data.description}}">
           </figure>
         </a>
 
         <div class="prod-card__content text-center">
-          <h3 class="color-white"><a href="#0">Graduation Caps</a></h3>
+          <h3 class="color-white"><a href="#0">{{product.data.title}}</a></h3>
 
           <div class="margin-top-xs">
             {% if sale %}
-            <del class="prod-card__price prod-card__price--old color-white">$79</del> 
+            <del class="prod-card__price prod-card__price--old color-white">{{product.data.saleprice}}</del> 
             {% endif %}
-            <ins class="prod-card__price prod-card__price--new color-white">$49</ins>
+            <ins class="prod-card__price prod-card__price--new color-white">{{product.data.price}}</ins>
           </div>
         </div>
       </div>
-  
-      <div class="prod-card col-4@md">
-        <span class="prod-card__badge" role="text">New <i class="sr-only">product</i></span>
-
-        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
-          <figure class="prod-card__img media-wrapper media-wrapper--4:3">
-            <img src="" alt="Product preview image">
-          </figure>
-        </a>
-
-        <div class="prod-card__content text-center">
-          <h3><a href="#0">Product Two</a></h3>
-
-          <div class="margin-top-xs">
-            <span class="prod-card__price">$79</span>
-          </div>
-        </div>
-      </div>
-  
-      <div class="prod-card col-4@md">
-        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
-          <figure class="prod-card__img media-wrapper media-wrapper--4:3">
-            <img src="" alt="Product preview image">
-          </figure>
-        </a>
-
-        <div class="prod-card__content text-center">
-          <h3><a href="#0">Product Three</a></h3>
-
-          <div class="margin-top-xs" role="text">
-            <del class="prod-card__price prod-card__price--old">$79</del> 
-            <ins class="prod-card__price prod-card__price--new">$49</ins>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
