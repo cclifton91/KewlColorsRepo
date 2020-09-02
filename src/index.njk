@@ -3,26 +3,27 @@ title: Home
 layout: layouts/default.njk 
 ---
 <!--HERO-->
-<section class="feature-v4 margin-top-xxl margin-top-0@md">
+<section class="feature-v4 margin-top-md padding-bottom-lg">
   <div class="container max-width-adaptive-lg">
     <div class="feature-v4__grid grid gap-md items-center">
-      <div class="col-5@md position-relative z-index-1">
+      <div class="col-5@md position-relative z-index-1 margin-top-md margin-top-0@md">
+        <div class="text-sm color-contrast-medium margin-bottom-xxs text-center text-left@md">Kewl Colors</div>
 
-        <div class="text-component text-center text-left@lg">
-          <h1 class="text-xxxxl feature-v4__text-offset@md color-primary">Your Style, <br>Customized .</h1>
-          <p class="color-primary text-md">The best looking kicks, caps, and accessories all handpainted and customized just for you.</p>
+        <div class="text-component text-center text-left@md">
+          <h1 class="text-xxxl feature-v4__text-offset@md color-primary">Your Style,<br> Customized</h1>
+          <p class="color-primary">The best looking kicks, caps, and accessories all handpainted and customized just for you.</p>
         </div>
 
         <div class="margin-top-sm">
-          <div class="flex flex-wrap gap-sm flex-column flex-row@md padding-x-lg padding-x-0@md">
-            <a href="#0" class="btn btn--primary">Shop</a>
+          <div class="flex items-center justify-center justify-start@md">
+            <a href="#0" class="btn btn--primary btn-md">Shop Here</a>
           </div>
         </div>
       </div>
 
       <div class="col-7@md">
         <figure>
-          <img src="/assets/img/heroimg.png?nf_resize=fit&w=600" alt="Vans shoes painted with donut sprinkles">
+          <img class="block width-100%" src="assets/img/herographic.png" alt="Hand painted vans shoes">
         </figure>
       </div>
     </div>
@@ -45,16 +46,18 @@ layout: layouts/default.njk
         <span class="prod-card__badge" role="text">Best Seller <i class="sr-only">product</i></span>
         <a href="{{ product.data.url }}" class="prod-card__img-link" aria-label="Description of the link">
           <figure class="prod-card__img">
-           <img src="{{ product.data.image }}" alt="{{product.data.description}}">
+           <img class="radius-lg" src="{{ product.data.image }}" alt="{{product.data.description}}">
           </figure>
         </a>
         <div class="prod-card__content text-center">
           <h3 class="color-white"><a href="#0">{{ product.data.title }}</a></h3>
           <div class="margin-top-xs">
-            {% if sale %}
-            <del class="prod-card__price prod-card__price--old color-white">{{product.data.saleprice}}</del> 
-            {% endif %}
+            {% if product.data.sale %}
+            <del class="prod-card__price prod-card__price--old color-white">{{product.data.price}}</del> 
+            <ins class="prod-card__price prod-card__price--new color-white">{{product.data.saleprice}}</ins>
+            {% else %}
             <ins class="prod-card__price prod-card__price--new color-white">{{product.data.price}}</ins>
+            {% endif %}
           </div>
         </div>
       </div>
