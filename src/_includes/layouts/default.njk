@@ -4,26 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#f5f55"/>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <title>Kewl Colors</title>
+        <title>{{title}}</title>
         {% seo "" %}
-        <script>
-            document
-                .getElementsByTagName("html")[0]
-                .className += " js";
-        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/assetsicons/16.png"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.css" />
         <!-- set the css that is built in the includes folder-->
         {% set css%}{% include "css/style.css" %}{% endset %}
         <!-- feed it through the filter -->
         <style>
             {{css | cssmin | safe}}
         </style>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/assetsicons/16.png"/>
-        <link rel="manifest" href="/manifest.json"/>
         <!-- browsers not supporting CSS variables -->
-        <title></title>
+         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+         <div hidden id="snipcart" data-api-key="M2MzMTliYTMtMzg1OC00NTZkLWIzZDYtMWRmOTNhYTZiNDlmNjM3MjQ1NjEwMDk0NjEzNzcy"></div>
+         <script src="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.js"></script>
+         <script>
+            document
+                .getElementsByTagName("html")[0]
+                .className += " js";
+        </script>
     </head>
     <body>
         <header class="header position-relative js-header ">
