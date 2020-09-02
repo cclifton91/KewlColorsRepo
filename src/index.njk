@@ -39,20 +39,17 @@ layout: layouts/default.njk
     </div>
 
     <div class="grid gap-md">
-    <pre>{{ collections.bestseller | dump }}</pre>
     {% for product in collections.bestseller %}
+
       <div class="prod-card col-4@md">
         <span class="prod-card__badge" role="text">Best Seller <i class="sr-only">product</i></span>
-
-        <a href="#0" class="prod-card__img-link" aria-label="Description of the link">
+        <a href="{{ product.data.url }}" class="prod-card__img-link" aria-label="Description of the link">
           <figure class="prod-card__img">
-           <img src="{{ product.data.img}}" alt="{{product.data.description}}">
+           <img src="{{ product.data.image }}" alt="{{product.data.description}}">
           </figure>
         </a>
-
         <div class="prod-card__content text-center">
-          <h3 class="color-white"><a href="#0">{{product.data.title}}</a></h3>
-
+          <h3 class="color-white"><a href="#0">{{ product.data.title }}</a></h3>
           <div class="margin-top-xs">
             {% if sale %}
             <del class="prod-card__price prod-card__price--old color-white">{{product.data.saleprice}}</del> 
@@ -61,6 +58,7 @@ layout: layouts/default.njk
           </div>
         </div>
       </div>
+
       {% endfor %}
     </div>
   </div>
@@ -69,33 +67,30 @@ layout: layouts/default.njk
 <!--TESIMONIAL --> 
 <section class="position-relative">
     <div class="grid">
-      <div class="bg-secondary flex items-center col-6@md">
-        <div class="padding-md padding-x-xxxl@lg padding-y-xl@lg">
-          <div class="text-sm color-contrast-medium margin-bottom-xxs"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="96" height="96" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M154.05108,32.71942v0c0,1.64475 -1.00333,3.1605 -2.55133,3.71233c-13.115,4.67625 -33.24975,21.87267 -33.24975,49.56825c0,4.75867 0.81342,7.16667 2.65167,7.16667c2.15358,0 5.5685,-3.58333 15.265,-3.58333c11.78558,0 25.08333,9.3955 25.08333,25.29475c0,13.91408 -10.43467,28.45525 -28.66667,28.45525c-14.81708,0 -35.83333,-11.04742 -35.83333,-43.33325c0,-44.71283 33.67258,-63.69017 51.71467,-70.98942c2.66242,-1.075 5.58642,0.83492 5.58642,3.70875z"></path><path d="M68.05108,32.71942v0c0,1.64475 -1.00333,3.1605 -2.55133,3.71233c-13.115,4.67625 -33.24975,21.87267 -33.24975,49.56825c0,4.75867 0.81342,7.16667 2.65167,7.16667c2.15358,0 5.5685,-3.58333 15.265,-3.58333c11.78558,0 25.08333,9.3955 25.08333,25.29475c0,13.91408 -10.43467,28.45525 -28.66667,28.45525c-14.81708,0 -35.83333,-11.04742 -35.83333,-43.33325c0,-44.71283 33.67258,-63.69017 51.71467,-70.98942c2.66242,-1.075 5.58642,0.83492 5.58642,3.70875z"></path></g></g></svg></div>
+      <div class="bg-secondary flex items-center col-6@md padding-x-xl padding-y-xl">
+        <div class="">
   
-          <div class="text-component color-white">
-            <p>Not only was the band fanstic, but Kewlcolors was amazing to work with. I was kept upt to date through out the process and the artwork far exceeded my expectations! I woudl definitely recommend this product and any of Kewlcolors’ services. </p>
+          <div class="text-component">
+            <p class="text-md color-secondary-darker font-primary">" Not only was the band fanstic, but Kewlcolors was amazing to work with. I was kept up to date through out the process and the artwork far exceeded my expectations! I would definitely recommend this product and any of Kewlcolors services." </p>
           </div>
     
           <div class="margin-top-sm">
             <div class="text-component color-white">
-              <p class="font-primary">Jessy</p>
+              <p class="font-primary color-secondary-darker text-lg text-xl@md">Jessy</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="bg-accent flex items-center col-6@md">
-        <div class="padding-md padding-x-xxxl@lg padding-y-xl@lg text-right">
-          <div class="text-sm color-contrast-medium margin-bottom-xxs"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="96" height="96" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M154.05108,32.71942v0c0,1.64475 -1.00333,3.1605 -2.55133,3.71233c-13.115,4.67625 -33.24975,21.87267 -33.24975,49.56825c0,4.75867 0.81342,7.16667 2.65167,7.16667c2.15358,0 5.5685,-3.58333 15.265,-3.58333c11.78558,0 25.08333,9.3955 25.08333,25.29475c0,13.91408 -10.43467,28.45525 -28.66667,28.45525c-14.81708,0 -35.83333,-11.04742 -35.83333,-43.33325c0,-44.71283 33.67258,-63.69017 51.71467,-70.98942c2.66242,-1.075 5.58642,0.83492 5.58642,3.70875z"></path><path d="M68.05108,32.71942v0c0,1.64475 -1.00333,3.1605 -2.55133,3.71233c-13.115,4.67625 -33.24975,21.87267 -33.24975,49.56825c0,4.75867 0.81342,7.16667 2.65167,7.16667c2.15358,0 5.5685,-3.58333 15.265,-3.58333c11.78558,0 25.08333,9.3955 25.08333,25.29475c0,13.91408 -10.43467,28.45525 -28.66667,28.45525c-14.81708,0 -35.83333,-11.04742 -35.83333,-43.33325c0,-44.71283 33.67258,-63.69017 51.71467,-70.98942c2.66242,-1.075 5.58642,0.83492 5.58642,3.70875z"></path></g></g></svg></div>
-  
-          <div class="text-component color-white">
-            <p>A truely talented Artist. The characters look like they shoudl and not fake. I experienced great customer service. Communication between use was prompt. Buying a custom magicband from Kewlcolors is magical and one of a kind. Thank you fo rmaking this process smooth.</p>
+      <div class="bg-accent flex items-center col-6@md padding-x-xl padding-y-xl">
+        <div class="padding-x-lg padding-y-lg">
+          <div class="text-component">
+            <p class="text-md color-accent-darker font-primary">" A truely talented Artist. I experienced great customer service. Communication between us was prompt. Buying a custom magicband from Kewlcolors is magical and one of a kind. Thank you for making this process smooth."</p>
           </div>
     
           <div class="margin-top-sm">
-            <div class="text-component color-white">
-              <p class="font-primary">Hurley</p>
+            <div class="text-component">
+              <p class="font-primary color-accent-darker text-lg text-xl@md">Hurley</p>
             </div>
           </div>
         </div>
@@ -107,15 +102,70 @@ layout: layouts/default.njk
 <section class="padding-y-lg bg-color-bg">
     <div class="container max-width-adaptive-lg flex items-center">
         <div class="grid gap-md items-center padding-y-xl">
-            <div class="col-6@md padding-bottom-xl padding-bottom-0@md">
+
+            <div class="col-6@md">
+                <div class="thumbslide thumbslide--vertical thumbslide--left js-thumbslide">
+                  <div class="slideshow slideshow--transition-slide" data-navigation="on">
+                    <p class="sr-only">Slideshow Items</p>
+                    
+                    <ul class="slideshow__content">
+                      <li class="slideshow__item bg js-slideshow__item slideshow__item--selected" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-1.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-1.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-2.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-2.jpg">
+                        <div class="thumbslide__caption text-component">
+                          <h3>Lorem ipsum dolor sit</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit provident quis porro?</p>
+                        </div>
+                      </li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-3.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-3.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-4.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-4.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-1.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-1.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-2.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-2.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-3.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-3.jpg"></li>
+
+                      <li class="slideshow__item bg js-slideshow__item" style="background-image: url('../../../app/assets/img/thumbnail-slideshow-img-4.jpg');" data-thumb="../../../app/assets/img/thumbnail-slideshow-img-4.jpg"></li>
+                    </ul>
+                  </div>
+                  <div class="thumbslide__nav-wrapper" aria-hidden="true">
+                    <nav class="thumbslide__nav"> 
+                      <ol class="thumbslide__nav-list">
+                        <!-- this content will be created using JavaScript -->
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-6@md">
                 <div class="text-md color-accent-light margin-bottom-xxs text-center text-left@md">We Believe In</div>
                 <div class="text-component text-center text-left@md">
                     <h2 class="text-xxl feature-v4__text-offset@md color-accent">Personal Style</h2>
                     <p class="color-accent">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having.</p>
                 </div>
-            </div>
-            <div class="col-6@md">
-                
+                <ul class="socials__btns flex items-center justify-center items-start@md justify-start@md gap-sm flex-wrap margin-top-md">
+                  <li>
+                    <a href="#0">
+                      <svg class="icon" viewBox="0 0 32 32"><title>Follow us on Twitter</title><g><path d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"></path></g></svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#0">
+                      <svg class="icon" viewBox="0 0 32 32"><title>Follow us on Facebook</title><path d="M32,16A16,16,0,1,0,13.5,31.806V20.625H9.438V16H13.5V12.475c0-4.01,2.389-6.225,6.043-6.225a24.644,24.644,0,0,1,3.582.312V10.5H21.107A2.312,2.312,0,0,0,18.5,13v3h4.438l-.71,4.625H18.5V31.806A16,16,0,0,0,32,16Z"></path></svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#0">
+                      <svg class="icon" viewBox="0 0 32 32"><title>Follow us on Instagram</title><path d="M16,3.7c4,0,4.479.015,6.061.087a6.426,6.426,0,0,1,4.51,1.639,6.426,6.426,0,0,1,1.639,4.51C28.282,11.521,28.3,12,28.3,16s-.015,4.479-.087,6.061a6.426,6.426,0,0,1-1.639,4.51,6.425,6.425,0,0,1-4.51,1.639c-1.582.072-2.056.087-6.061.087s-4.479-.015-6.061-.087a6.426,6.426,0,0,1-4.51-1.639,6.425,6.425,0,0,1-1.639-4.51C3.718,20.479,3.7,20.005,3.7,16s.015-4.479.087-6.061a6.426,6.426,0,0,1,1.639-4.51A6.426,6.426,0,0,1,9.939,3.79C11.521,3.718,12,3.7,16,3.7M16,1c-4.073,0-4.584.017-6.185.09a8.974,8.974,0,0,0-6.3,2.427,8.971,8.971,0,0,0-2.427,6.3C1.017,11.416,1,11.927,1,16s.017,4.584.09,6.185a8.974,8.974,0,0,0,2.427,6.3,8.971,8.971,0,0,0,6.3,2.427c1.6.073,2.112.09,6.185.09s4.584-.017,6.185-.09a8.974,8.974,0,0,0,6.3-2.427,8.971,8.971,0,0,0,2.427-6.3c.073-1.6.09-2.112.09-6.185s-.017-4.584-.09-6.185a8.974,8.974,0,0,0-2.427-6.3,8.971,8.971,0,0,0-6.3-2.427C20.584,1.017,20.073,1,16,1Z"></path><path d="M16,8.3A7.7,7.7,0,1,0,23.7,16,7.7,7.7,0,0,0,16,8.3ZM16,21a5,5,0,1,1,5-5A5,5,0,0,1,16,21Z"></path><circle cx="24.007" cy="7.993" r="1.8"></circle></svg>
+                    </a>
+                  </li>
+                </ul>
             </div>
         </div>
     </div>

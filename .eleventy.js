@@ -1,7 +1,7 @@
 const pluginPWA = require("eleventy-plugin-pwa");
 const cleanCSS = require("clean-css");
 const pluginSEO = require("eleventy-plugin-seo");
-
+const util = require('util');
 
 module.exports = function (config) {
 	/** PLUGINS **/
@@ -31,7 +31,7 @@ module.exports = function (config) {
 	// Returns the products collection but filters out all those that have featured set to true
 	config.addCollection("bestseller", (collection) => {
 		return collection
-			.getFilteredByGlob("./posts/*.md")
+			.getFilteredByGlob("./src/products/*.md")
 			.filter((x) => x.data.bestseller)
 			.slice(0, 3);
 	});
