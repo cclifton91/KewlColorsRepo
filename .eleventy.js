@@ -3,6 +3,7 @@ const cleanCSS = require("clean-css");
 const pluginSEO = require("eleventy-plugin-seo");
 const util = require('util');
 
+
 module.exports = function (config) {
 	/** PLUGINS **/
 	//PWA
@@ -19,6 +20,7 @@ module.exports = function (config) {
 	//SEO
 	config.addPlugin(pluginSEO, require("./src/_data/seo.json"));
 	
+	
 	/** COLECTIONS **/
 	//Adds data dump functionality
 	config.addFilter("dump", (obj) => {
@@ -27,6 +29,20 @@ module.exports = function (config) {
 	// Returns a collection of blog products in reverse date order
 	config.addCollection("products", (collection) => {
 		return [...collection.getFilteredByGlob("./src/products/*.md")];
+	});
+	// Returns a collection of tags
+	config.addCollection("tags", (collection) => {
+		let tags = new Set();
+
+		collection.getAll().forEach((item) => {
+			if ("tags" in item.data) {
+				for (const tag of item.data.tags) {
+					tags.add(tag);
+				}
+			}
+		});
+
+		return [...tags];
 	});
 	// Returns the products collection but filters out all those that have featured set to true
 	config.addCollection("bestseller", (collection) => {

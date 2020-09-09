@@ -3,7 +3,7 @@ title: Home
 layout: layouts/default.njk 
 ---
 <!--HERO-->
-<section class="feature-v4 margin-top-md padding-bottom-lg">
+<section class="feature-v4 margin-top-xxl padding-bottom-xxl">
   <div class="container max-width-adaptive-lg">
     <div class="feature-v4__grid grid gap-md items-center">
       <div class="col-5@md position-relative z-index-1 margin-top-md margin-top-0@md">
@@ -16,7 +16,7 @@ layout: layouts/default.njk
 
         <div class="margin-top-sm">
           <div class="flex items-center justify-center justify-start@md">
-            <a href="#0" class="btn btn--primary btn-md">Shop Here</a>
+            <a href="/shop" class="btn btn--primary btn-md">Shop Here</a>
           </div>
         </div>
       </div>
@@ -53,10 +53,10 @@ layout: layouts/default.njk
           <h3 class="color-white"><a href="#0">{{ product.data.title }}</a></h3>
           <div class="margin-top-xs">
             {% if product.data.sale %}
-            <del class="prod-card__price prod-card__price--old color-white">{{product.data.price}}</del> 
-            <ins class="prod-card__price prod-card__price--new color-white">{{product.data.saleprice}}</ins>
+            <del class="prod-card__price prod-card__price--old color-white">{{ product.data.price }}</del> 
+            <ins class="prod-card__price prod-card__price--new color-white">{{ product.data.saleprice }}</ins>
             {% else %}
-            <ins class="prod-card__price prod-card__price--new color-white">{{product.data.price}}</ins>
+            <ins class="prod-card__price prod-card__price--new color-white">{{ product.data.price }}</ins>
             {% endif %}
           </div>
         </div>
@@ -102,9 +102,9 @@ layout: layouts/default.njk
 </section>
 <!--TESIMONIAL-->
 <!--ABOUT --> 
-<section class="padding-y-lg bg-color-bg">
+<section class="padding-y-lg bg-color-bg" id="#about">
     <div class="container max-width-adaptive-lg flex items-center">
-        <div class="grid gap-lg items-center padding-y-xl">
+        <div class="grid gap-xxl items-center padding-y-xl">
 
             <div class="col-6@md">
                 <div class="thumbslide thumbslide--vertical thumbslide--left js-thumbslide">
