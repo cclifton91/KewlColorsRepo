@@ -6,5 +6,5 @@ description: Custom painted Nike sneakers"
 bestseller: true 
 sale: true
 saleprice: "$200"
-tags: ["Products", "Shoes" ]
+tags: "Shoes"
 ---

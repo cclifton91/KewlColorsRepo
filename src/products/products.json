@@ -1,5 +1,4 @@
 {
-    "tags": [
-        "Products", "Shoes", "Accessories", "Hats"
-    ]
+    "layout": "layouts/product-single.njk",
+    "tags": ["Products"]
 }

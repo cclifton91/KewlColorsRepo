@@ -1,0 +1,164 @@
+---
+layout: layouts/default.njk 
+productpage: true 
+---
+<section class="product padding-y-xxl bg-white">
+    <article class="container max-width-lg bg padding-x-xl padding-y-lg">
+        <div class="margin-bottom-sm">
+            <nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
+            <ol class="flex flex-wrap gap-xxs">
+                <li class="breadcrumbs__item">
+                <a href="/shop" class="color-inherit">Shop</a>
+                <span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+                </li>
+            
+                <li class="breadcrumbs__item">
+                <p class="color-inherit">{{ tags }}</p>
+                <span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+                </li>
+            
+                <li class="breadcrumbs__item" aria-current="page">{{ title }}</li>
+            </ol>
+            </nav>
+        </div>
+
+        <div class="grid gap-md">
+            <div class="col-6@md col-7@lg">
+            <figure class="image-zoom js-image-zoom ">
+                <img class="image-zoom__preview js-image-zoom__preview" src="{{ image }}" alt="Preview image description">
+                <figcaption class="sr-only">{{ description }}</figcaption>
+            </figure>
+            </div>
+
+            <div class="col-6@md col-5@lg">
+            <div class="margin-bottom-xs">
+                <h1>{{ title }}</h1>
+            </div>
+
+            <div class="flex">
+                <div class="rating rating--read-only js-rating js-rating--read-only text-xs">
+                <p class="sr-only">The rating of this product is <span class="rating__value js-rating__value">4.5</span> out of 5</p>
+        
+                <div class="rating__control rating__control--is-hidden js-rating__control">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><polygon points="12 1.489 15.09 7.751 22 8.755 17 13.629 18.18 20.511 12 17.261 5.82 20.511 7 13.629 2 8.755 8.91 7.751 12 1.489" fill="currentColor"/></svg>
+                </div>
+                </div>
+
+                <!--<p class="margin-left-xxs">
+                <a href="#0" class="text-sm color-inherit">65 reviews</a>
+                </p>-->
+            </div>
+
+            <div class="text-component v-space-md margin-y-md">
+                <p class="text-md">{% if sale %}<del class="text-line-through color-accent margin-right-xxs text-md">{{ saleprice }}</del><ins class="text-decoration-none color-primary text-md">{{ price }}</ins>{% else %}<ins class="text-decoration-none color-primary text-md">{{ price }}</ins>{% endif %}</p>
+                <p>{{ description }}</p>
+            </div>
+
+            <div class="flex flex-column items-start">
+            <label class="form-label margin-bottom-xs" for="selectThis">Select Your Size:</label>
+            
+            <div class="select inline-block js-select margin-bottom-md" data-trigger-class="btn btn--subtle">
+                <select name="selectThis" id="selectThis">
+                <optgroup label="Group 1">
+                    <option value="0" selected>Sizes</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </optgroup>
+            
+                <optgroup label="Group 2">
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                </optgroup>
+                </select>
+                
+                <svg class="icon icon--xs margin-left-xxxs" aria-hidden="true" viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>
+            </div>
+            </div>
+
+            <div class="margin-bottom-xxl">
+                <div class="flex flex-column flex-row@sm gap-xxs">
+                <button class="btn btn--primary flex-grow">Add to Cart</button>
+                <button class="btn btn--subtle">
+                    <span class="margin-right-xxs hide@sm">Add to wish list</span>
+                    <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Add to wish list</title><path  stroke-width="1" stroke="currentColor" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.328,2.672 c-1.562-1.562-4.095-1.562-5.657,0C8.391,2.952,8.18,3.27,8,3.601c-0.18-0.331-0.391-0.65-0.672-0.93 c-1.562-1.562-4.095-1.562-5.657,0c-1.562,1.562-1.562,4.095,0,5.657L8,14.5l6.328-6.172C15.891,6.766,15.891,4.234,14.328,2.672z"></path></svg>
+                </button>
+                </div>
+            </div>
+
+            <div class="tabs text-sm js-tabs padding-bottom-md">
+                <ul class="flex flex-wrap gap-sm js-tabs__controls" aria-label="Tabs Interface">
+                <li><a href="#proTabPanelDetails" class="tabs__control" aria-selected="true">Details</a></li>
+                <li><a href="#proTabPanelSizing" class="tabs__control">Sizing</a></li>
+                <li><a href="#proTabPanelShipping" class="tabs__control">Shipping &amp; Returns</a></li>
+                </ul>
+            
+                <div class="js-tabs__panels">
+                <section id="proTabPanelDetails" class="padding-top-sm js-tabs__panel">
+                    <div class="text-component color-contrast-medium">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit voluptatibus expedita. Laboriosam maxime aut dolorem eum qui nemo! Ea!</p>
+                    </div>
+                </section>
+            
+                <section id="proTabPanelSizing" class="padding-top-sm js-tabs__panel">
+                    <div class="text-component color-contrast-medium">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nobis! Vitae quis minus accusantium qui atque? Officiis sunt exercitationem natus, minus sapiente debitis eum animi porro. Ut cupiditate amet expedita!</p>
+                    </div>
+                </section>
+            
+                <section id="proTabPanelShipping" class="padding-top-sm js-tabs__panel">
+                    <div class="text-component color-contrast-medium">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, veritatis.</p>
+                    </div>
+                </section>
+                </div>
+            </div>
+            <!--<div class="margin-bottom-md">
+                <p class="sr-only">Select size:</p>
+                
+                <div class="btns gap-xs btns--radio">
+                <div>
+                    <input type="radio" name="sizeBtns" id="sizeBtnsS" checked>
+                    <label class="btns__btn" for="sizeBtnsS">S</label>
+                </div>
+                
+                <div>
+                    <input type="radio" name="sizeBtns" id="sizeBtnsM">
+                    <label class="btns__btn" for="sizeBtnsM">M</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="sizeBtns" id="sizeBtnsL">
+                    <label class="btns__btn" for="sizeBtnsL">L</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="sizeBtns" id="sizeBtnsXL" disabled>
+                    <label class="btns__btn btns__btn--disabled" for="sizeBtnsXL">XL</label>
+                </div>
+                </div>
+            </div>
+        
+            <div class="flex gap-xs">
+                <label class="form-label sr-only" for="qtyInput">Quantity:</label>
+
+                <div class="number-input number-input--v1 js-number-input ">
+                <input class="form-control js-number-input__value" type="number" name="qtyInput" id="qtyInput" min="0" max="10" step="1" value="1">
+
+                <div class="number-input__btns">
+                    <button class="reset number-input__btn number-input__btn--plus js-number-input__btn" aria-label="Increase Number">
+                    <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><g><polygon points="13,11 8,5 3,11 "></polygon></g></svg>
+                    </button>
+            
+                    <button class="reset number-input__btn number-input__btn--minus js-number-input__btn" aria-label="Decrease Number">
+                    <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><g><polygon points="3,5 8,11 13,5 "></polygon></g></svg>
+                    </button>
+                </div>
+                </div>
+        
+                <button class="btn btn--primary flex-grow">Add to Cart</button>
+            </div>-->
+            </div>
+        </div>
+    </article>
+</section>

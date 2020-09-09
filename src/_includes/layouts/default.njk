@@ -31,7 +31,7 @@
         <header class="header position-relative js-header ">
             <div class="header__container container max-width-lg">
                 <div class="header__logo">
-                <a href="#0">
+                <a href="/">
                    <img src="/_assets/icons/KewlColorsLogoVariation1.png" alt="Kewl Colors Logo">
                 </a>
                 </div>
@@ -64,8 +64,8 @@
              {{ content | safe }}
         </main>
         <!-- FOOTER --> 
-        <section class="contact-v2 has-section-divider-top bg-secondary" id="#contact">
-            <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="var(--color-bg)" d="M-153.5,85.5a4002.033,4002.033,0,0,1,658-71c262.854-6.5,431.675,15.372,600,27,257.356,17.779,624.828,19.31,1089-58v102Z"/></svg>
+        <section class="contact-v2 has-section-divider-top bg-secondary js-smooth-scroll" id="#contact">
+            <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="{% if productpage %}var(--color-white){% else %} var(--color-bg){% endif %}" d="M-153.5,85.5a4002.033,4002.033,0,0,1,658-71c262.854-6.5,431.675,15.372,600,27,257.356,17.779,624.828,19.31,1089-58v102Z"/></svg>
         <div class="container max-width-xs margin-bottom-lg padding-y-xxl">
             <div class="text-component text-center color-white">
             <h2 class="color-white">Get In Touch</h1>
