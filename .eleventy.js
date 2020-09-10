@@ -23,6 +23,9 @@ module.exports = function (config) {
 	config.addFilter("dump", (obj) => {
 		return util.inspect(obj);
 	});
+	// A responsive image helper using Netlify Large Media - image transformation
+	config.addShortcode("picture", require("./src/_data/pictures.js"));
+
 
 	/** COLECTIONS **/
 
