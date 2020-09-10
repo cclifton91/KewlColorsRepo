@@ -3,7 +3,7 @@ title: Home
 layout: layouts/default.njk 
 ---
 <!--HERO-->
-<section class="feature-v4 margin-top-xxl padding-bottom-xxl">
+<section class="feature-v4 margin-top-xl padding-bottom-xxl">
   <div class="container max-width-adaptive-lg">
     <div class="feature-v4__grid grid gap-md items-center">
       <div class="col-5@md position-relative z-index-1 margin-top-md margin-top-0@md">
@@ -44,7 +44,7 @@ layout: layouts/default.njk
 
       <div class="prod-card col-4@md">
         <span class="prod-card__badge" role="text">Best Seller <i class="sr-only">product</i></span>
-        <a href="{{ product.url }}" class="prod-card__img-link" aria-label="Description of the link">
+        <a href="{{ product.data.url }}" class="prod-card__img-link" aria-label="Description of the link">
           <figure class="prod-card__img">
            <img class="radius-lg" src="{{ product.data.image }}" alt="{{product.data.description}}">
           </figure>
@@ -102,9 +102,9 @@ layout: layouts/default.njk
 </section>
 <!--TESIMONIAL-->
 <!--ABOUT --> 
-<section class="padding-y-lg bg-color-bg js-smooth-scroll" id="#about">
+<section class="padding-y-lg bg-color-bg" id="#about">
     <div class="container max-width-adaptive-lg flex items-center">
-        <div class="grid gap-xxl items-center padding-y-xl">
+        <div class="grid gap-lg items-center padding-y-xl">
 
             <div class="col-6@md">
                 <div class="thumbslide thumbslide--vertical thumbslide--left js-thumbslide">

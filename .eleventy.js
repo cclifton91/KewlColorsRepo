@@ -19,13 +19,13 @@ module.exports = function (config) {
 	});
 	//SEO
 	config.addPlugin(pluginSEO, require("./src/_data/seo.json"));
-	
-	
-	/** COLECTIONS **/
-	//Adds data dump functionality
+	//DATA DUMP HELPER
 	config.addFilter("dump", (obj) => {
 		return util.inspect(obj);
 	});
+
+	/** COLECTIONS **/
+
 	// Returns a collection of blog products in reverse date order
 	config.addCollection("products", (collection) => {
 		return [...collection.getFilteredByGlob("./src/products/*.md")];
