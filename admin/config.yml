@@ -9,20 +9,23 @@ collections:
       - { label: 'Name', name: 'title', widget: 'string' }
       - { label: 'Price', name: 'price', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Is this product a best seller?', name: 'bestseller', widget: 'boolean', default: false }
+      - { label: 'Category', name: 'tags', widget: 'select', options: ["Accessories", "Shoes", "Hats"] }
+      - label: 'On Sale'
+        name: 'onsale'
+        widget: 'object'
+        fields: 
+          - {label: 'Is this item on sale?', name: 'sale', widget: 'boolean', default: false }
+          - {label: 'Sale Price', name: 'saleprice', widget: 'string' }
+      - { label: 'Details', name: 'detail', widget: 'string', default: 'Discuss with client' }
+      - { label: 'Sizing', name: 'sizingimg', widget: 'image', default: '/assets/img/'}
+      - { label: 'Shipping & Returns', name: 'shipReturn', widget: 'string', default: 'Discuss with client' }
       - {
         label: 'Layout',
         name: 'layout',
         widget: 'hidden',
         default: 'layouts/default.njk'
       }
-media_folder: "assets/img"
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: clifton-creative
-    api_key: 489455415733233
-    default_transformations:
-      - fetch_format: auto
-        quality: auto
-        width: 400
-        crop: scale
+media_folder: "/assets/img"
+
+  

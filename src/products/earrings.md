@@ -6,4 +6,7 @@ description: "hand painted wooden earrings"
 bestseller: false
 sale: false
 tags: "Accessories"
+details: "lorem"
+sizing: "lorem"
+shipping&returns: "lorem" 
 ---
