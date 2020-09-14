@@ -26,7 +26,24 @@ collections:
         widget: 'hidden',
         default: 'layouts/default.njk'
       }
- 
+  - name: 'Pages'
+    label: 'Pages'
+    files: 
+      - label: 'Home'
+        name: "homepage"
+        file: "index.html"
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Heading', name: 'heading', widget: 'text'}
+          - { label: 'Subheading', name: subheading', widget: 'text'}
+      - label: 'Site Settings'
+        name: 'settings'
+        file: '_data/settings.json'
+        fields:
+          - { label: 'Logo', name: 'logo', widget: 'image'}
+
+
 
 
 media_folder: "/assets/img"
