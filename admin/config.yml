@@ -26,28 +26,7 @@ collections:
         widget: 'hidden',
         default: 'layouts/default.njk'
       }
-  - name: 'Pages'
-    label: 'Pages'
-    files:
-      - label: 'Homepage'
-        name: 'homepage'
-        file: 'index.html'
-        fields:
-         - { label: 'Layout', name: 'layout', widget:'hidden', default: 'default.njk'}
-         - { label: "Heading", name: 'heading', wdiget: 'string'}
-         - { label: "Subtitle", name: 'subtitle', wdiget: 'string'}
-         - { label: 'About', name:"about title", widget: 'string'}
-         - { label: 'Description', name: 'description', widget: 'string'}
-      - label: 'Site Settings'
-        name: 'settings'
-        file: "_data/settings.json"
-        fields: 
-          - { label: 'Logo', name: 'logo', widget: 'image', requried: false }
-          - { label: 'Twitter Account', name: 'twitteract', widget: 'string' }
-          - { label: 'Facebook Account', name: 'facebookact', widget: 'string' }
-          - { label: 'Instagram Account', name: 'instagramact', widget: 'string' }
-          - { label: 'Email', name: 'email', widget: 'string' }
-          - { label: 'Phone Number', name: 'phonenum', widget: 'string'}
+ 
 
 
 media_folder: "/assets/img"
