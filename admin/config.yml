@@ -36,12 +36,47 @@ collections:
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
           - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Heading', name: 'heading', widget: 'text'}
-          - { label: 'Subheading', name: subheading', widget: 'text'}
-      - label: 'Site Settings'
-        name: 'settings'
-        file: '_data/settings.json'
+          - { label: 'Subheading', name: 'subheading', widget: 'text'}
+          - { label: 'About Heading', name: 'aboutheading', widget: 'text'}
+          - { label: 'About Description', name: 'aboutdescpt', widget: 'text'}
+      - label: 'Refunds'
+        name: "refund"
+        file: "refund.html"
         fields:
-          - { label: 'Logo', name: 'logo', widget: 'image'}
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Heading', name: 'heading', widget: 'text'}
+          - { label: 'Subheading', name: 'subheading', widget: 'text'}
+          - { label: 'Body', name: 'body', widget: 'markdown'}
+      - label: 'Privacy'
+        name: "privacy"
+        file: "privacy.html"
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Heading', name: 'heading', widget: 'text'}
+          - { label: 'Subheading', name: 'subheading', widget: 'text'}
+          - { label: 'Body', name: 'body', widget: 'markdown'}
+  - name: 'Settings'
+    label: 'Site Settings'
+    files:
+      - label: 'Contact'
+        name: 'contact'
+        file: '_data/contact.json'
+        fields: 
+          - { label: "Owner", name: "owner", widget: 'string'}
+          - { label: "Phone Number", name: 'number', widget: 'string'}
+          - { label: 'Email', name: 'email', widget: 'string'}
+          - { label: 'Address', name: 'address', widget: 'string'}
+      - label: 'Social Media'
+        name: 'contact'
+        file: '_data/social.json'
+        fields: 
+          - { label: "Facebook", name: "facebook", widget: 'string'}
+          - { label: "Twiter", name: 'twitter', widget: 'string'}
+          - { label: 'Instagram', name: 'instgram', widget: 'string'}
+          - { label: 'Etsy', name: 'etsy', widget: 'string'}
+
 
 
 
