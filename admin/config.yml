@@ -76,6 +76,8 @@ collections:
           - { label: "Twiter", name: 'twitter', widget: 'string'}
           - { label: 'Instagram', name: 'instgram', widget: 'string'}
           - { label: 'Etsy', name: 'etsy', widget: 'string'}
+          - { label: 'Youtube', name: 'youtube', widget: 'string'}
+          - { label: 'Pinterest', name: 'pinterest', widget: 'string'}
 
 
 
