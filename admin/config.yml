@@ -35,8 +35,6 @@ collections:
         fields:
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
           - { label: 'Title', name: 'title', widget: 'string'}
-          - { label: 'Heading', name: 'heading', widget: 'text'}
-          - { label: 'Subheading', name: 'subheading', widget: 'text'}
           - { label: 'About Heading', name: 'aboutheading', widget: 'text'}
           - { label: 'About Description', name: 'aboutdescpt', widget: 'text'}
       - label: 'Refunds'
@@ -51,6 +49,14 @@ collections:
       - label: 'Privacy'
         name: "privacy"
         file: "privacy.html"
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Subheading', name: 'subheading', widget: 'text'}
+          - { label: 'Body', name: 'body', widget: 'markdown'}
+      - label: 'About'
+        name: "about"
+        file: "about.html"
         fields:
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'layouts/default.njk'}
           - { label: 'Title', name: 'title', widget: 'string'}

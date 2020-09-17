@@ -1,9 +1,9 @@
 {
-    "facebook": "",
-    "twitter": "",
-    "instagram": "",
-    "etsy": "",
-    "youtube": "",
-    "pinterest" : ""
+    "facebook": "https://www.facebook.com/",
+    "twitter": "https://www.twitter.com/",
+    "instagram": "https://www.instagram.com/",
+    "etsy": "www.etsy.com",
+    "youtube": "www.youtube.com",
+    "pinterest" : "www.pinterest.com"
 
 }
