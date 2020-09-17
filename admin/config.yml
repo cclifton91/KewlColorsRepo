@@ -69,7 +69,7 @@ collections:
           - { label: 'Email', name: 'email', widget: 'string'}
           - { label: 'Address', name: 'address', widget: 'string'}
       - label: 'Social Media'
-        name: 'contact'
+        name: 'social'
         file: '_data/social.json'
         fields: 
           - { label: "Facebook", name: "facebook", widget: 'string'}
