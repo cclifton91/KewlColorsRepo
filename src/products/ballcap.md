@@ -1,7 +1,7 @@
 ---
 title: "Ball Cap"
 price: "$45"
-image: "/assets/img/productfeatureimg1.jpg?nf_resize=fit&w=320"
+image: "/_assets/img/productfeatureimg1.jpg"
 description: "hand painted ball caps"
 bestseller: false
 sale: false

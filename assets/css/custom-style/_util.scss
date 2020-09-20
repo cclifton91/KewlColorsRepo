@@ -5,9 +5,12 @@
 // --------------------------------
 
 // 👇 your custom utility class
-// .my-util-class { 
-//   property: value;
-// }
+.respimg{ 
+    display:block;
+    width:100%;
+    max-width:100%;
+    height: auto; 
+}
 
 // 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
 // @each $breakpoint, $value in $breakpoints { 

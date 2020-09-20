@@ -45,6 +45,7 @@ gulp.task("scripts", function () {
 		.pipe(gulp.dest(scriptsJsPath));
 });
 
+//Dev
 gulp.task(
 	"watch",
 	gulp.series(["sass", "scripts"], function () {

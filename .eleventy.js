@@ -1,30 +1,72 @@
 const pluginPWA = require("eleventy-plugin-pwa");
 const cleanCSS = require("clean-css");
 const pluginSEO = require("eleventy-plugin-seo");
+const pluginLocalRespimg = require("eleventy-plugin-local-respimg");
 const util = require('util');
 
 
 module.exports = function (config) {
 	/** PLUGINS **/
-	//PWA
+	//pwa
 	config.addPlugin(pluginPWA, {
 		swDest: "./_site/service-worker.js",
 		globDirectory: "./_site",
 		clientsClaim: true,
 		skipWaiting: true,
 	});
-	//CSSMIN
+	//cssmin
 	config.addFilter("cssmin", function (code) {
 		return new cleanCSS({}).minify(code).styles;
 	});
-	//SEO
+	//seo
 	config.addPlugin(pluginSEO, require("./src/_data/seo.json"));
-	//DATA DUMP HELPER
+	//data dump filter
 	config.addFilter("dump", (obj) => {
 		return util.inspect(obj);
 	});
+	//11ty img
+	config.addPlugin(pluginLocalRespimg, {
+		folders: {
+			source: "src", // Folder images are stored in
+			output: "_site", // Folder images should be output to
+		},
+		images: {
+			resize: {
+				min: 300, // Minimum width to resize an image to
+				max: 1500, // Maximum width to resize an image to
+				step: 300, // Width difference between each resized image
+			},
+			gifToVideo: false, // Convert GIFs to MP4 videos
+			sizes: "100vw", // Default image `sizes` attribute
+			lazy: true, // Include `loading="lazy"` attribute for images
+			additional: [
+				// Globs of additional images to optimize (won't be resized)
+				"/_assets/icons/**/*",
+			],
+			watch: {
+				src: "/_assets/img/**/*", // Glob of images that Eleventy should watch for changes to
+			},
+			pngquant: {
+				/* ... */
+			}, // imagemin-pngquant options
+			mozjpeg: {
+				/* ... */
+			}, // imagemin-mozjpeg options
+			svgo: {
+				/* ... */
+			}, // imagemin-svgo options
+			gifresize: {
+				/* ... */
+			}, // @gumlet/gif-resize options
+			webp: {
+				/* ... */
+			}, // imagemin-webp options
+			gifwebp: {
+				/* ... */
+			}, // imagemin-gif2webp options
+		},
+	});
 	
-
 
 	/** COLECTIONS **/
 
@@ -70,4 +112,4 @@ module.exports = function (config) {
 			include: "_includes",
 		},
 	};
-};
+}
