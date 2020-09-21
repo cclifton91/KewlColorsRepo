@@ -52,7 +52,7 @@ aboutdescpt: "There is a moment in the life of any aspiring astronomer that it i
           </figure>
         </a>
         <div class="prod-card__content text-center">
-          <h3 class="color-white"><a href="#0">{{ product.data.title }}</a></h3>
+          <h3 class="color-white"><a href="{{ product.url }}">{{ product.data.title }}</a></h3>
           <div class="margin-top-xs">
             {% if product.data.sale %}
             <del class="prod-card__price prod-card__price--old color-white">{{ product.data.price }}</del> 

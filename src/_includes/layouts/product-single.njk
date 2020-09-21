@@ -35,7 +35,7 @@ productpage: true
                 <h1>{{ title }}</h1>
             </div>
 
-            <div class="flex">
+            <!--<div class="flex">
                 <div class="rating rating--read-only js-rating js-rating--read-only text-xs">
                 <p class="sr-only">The rating of this product is <span class="rating__value js-rating__value">4.5</span> out of 5</p>
         
@@ -46,18 +46,18 @@ productpage: true
 
                 <!--<p class="margin-left-xxs">
                 <a href="#0" class="text-sm color-inherit">65 reviews</a>
-                </p>-->
-            </div>
+                </p>
+            </div>-->
 
             <div class="text-component v-space-md margin-y-md">
-                <p class="text-md">{% if sale %}<del class="text-line-through color-accent margin-right-xxs text-md">{{ saleprice }}</del><ins class="text-decoration-none color-primary text-md">{{ price }}</ins>{% else %}<ins class="text-decoration-none color-primary text-md">{{ price }}</ins>{% endif %}</p>
+                <p class="text-md">{% if sale %}<del class="text-line-through color-accent margin-right-xxs text-md">${{ saleprice }}</del><ins class="text-decoration-none color-primary text-md">${{ price }}</ins>{% else %}<ins class="text-decoration-none color-primary text-md">${{ price }}</ins>{% endif %}</p>
                 <p>{{ description }}</p>
             </div>
 
-            <div class="flex flex-column items-start">
+            <!--zx<div class="flex flex-column items-start">
             <label class="form-label margin-bottom-xs" for="selectThis">Select Your Size:</label>
             
-            <div class="select inline-block js-select margin-bottom-md" data-trigger-class="btn btn--subtle">
+            div class="select inline-block js-select margin-bottom-md" data-trigger-class="btn btn--subtle">
                 <select name="selectThis" id="selectThis">
                 <optgroup label="Group 1">
                     <option value="0" selected>Sizes</option>
@@ -74,11 +74,11 @@ productpage: true
                 
                 <svg class="icon icon--xs margin-left-xxxs" aria-hidden="true" viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>
             </div>
-            </div>
+            </div>-->
 
             <div class="margin-bottom-xxl">
                 <div class="flex flex-column flex-row@sm gap-xxs">
-                <button class="btn btn--primary flex-grow">Add to Cart</button>
+                <button class="btn btn--primary flex-grow snipcart-add-item" data-item-id="{{ title }}" data-item-price="{{ price }}" data-item-url="{{ page.url }}" data-item-description="{{ description }}" data-item-image="{{ image }}" data-item-name="{{ title }}" data-item-custom1-name="Size" data-item-custom1-options="Select A Size|Womens: 6|Womeans: 6.5|Womens: 7|Womens: 7.5|Womens: 8| Womens:8.5 |Womens: 9|Womens: 9.5|Womens: 10|Womens: 10.5|Womens: 11|Womens: 11.5|Womens: 12|Mens: 7|Mens: 7.5|Mens: 8|Mens: 8.5|Mens: 9|Mens: 9.5|Mens: 10|Mens: 10.5|Mens: 11|Mens: 11.5|Mens: 12|Mens: 12.5|Mens: 13|Mens:13.5|Mens: 14">Add to Cart</button>
                 <button class="btn btn--subtle">
                     <span class="margin-right-xxs hide@sm">Add to wish list</span>
                     <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Add to wish list</title><path  stroke-width="1" stroke="currentColor" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.328,2.672 c-1.562-1.562-4.095-1.562-5.657,0C8.391,2.952,8.18,3.27,8,3.601c-0.18-0.331-0.391-0.65-0.672-0.93 c-1.562-1.562-4.095-1.562-5.657,0c-1.562,1.562-1.562,4.095,0,5.657L8,14.5l6.328-6.172C15.891,6.766,15.891,4.234,14.328,2.672z"></path></svg>

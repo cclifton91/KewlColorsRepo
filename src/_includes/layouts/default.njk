@@ -14,19 +14,16 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
         <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-
+        <link rel="preconnect" href="https://app.snipcart.com">
+        <link rel="preconnect" href="https://cdn.snipcart.com">
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.css" />
         <!-- set the css that is built in the includes folder-->
         {% set css %}{% include "css/style.css" %}{% endset %}
         <!-- feed it through the filter -->
         <style>
             {{css | cssmin | safe}}
         </style>
-        <!-- scripts -->
-         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-         <div hidden id="snipcart" data-api-key="M2MzMTliYTMtMzg1OC00NTZkLWIzZDYtMWRmOTNhYTZiNDlmNjM3MjQ1NjEwMDk0NjEzNzcy"></div>
-         <script src="https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.js"></script>
          <script>
             document
                 .getElementsByTagName("html")[0]
@@ -59,8 +56,8 @@
                         </span>
                         <!--end nav loop-->
                         <li class="header__item header__item--divider" aria-hidden="true"></li>
-                        <li class="header__item"><a href="#0" class="header__link">Login</a></li>
-                        <li class="header__item"><a href="#0" class="btn btn--primary"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21.9889 7.44277C21.9943 7.46 22 7.47856 22 7.5C22 7.51392 21.9957 7.52785 21.9911 7.54277C21.9857 7.56 21.98 7.57856 21.98 7.6C21.98 7.60965 21.981 7.62035 21.9821 7.6314C21.9844 7.65471 21.9868 7.67965 21.98 7.7L20.58 14.7C20.49 15.16 20.08 15.5 19.6 15.5H7.6C7.12 15.5 6.71 15.16 6.62 14.7L4.78 5.5H3C2.45 5.5 2 5.05 2 4.5C2 3.95 2.45 3.5 3 3.5H5.6C6.08 3.5 6.49 3.84 6.58 4.3L7.02 6.5H21C21.0114 6.5 21.0228 6.5029 21.0348 6.50594C21.0543 6.51088 21.0752 6.51619 21.1 6.51C21.1097 6.51 21.1203 6.50896 21.1314 6.50789C21.1547 6.50564 21.1797 6.50322 21.2 6.51C21.215 6.515 21.23 6.5225 21.245 6.53C21.26 6.5375 21.275 6.545 21.29 6.55C21.36 6.57 21.42 6.6 21.48 6.63C21.53 6.66 21.58 6.69 21.63 6.73L21.63 6.73002C21.68 6.78001 21.72 6.82001 21.76 6.87C21.81 6.92 21.84 6.97 21.87 7.03C21.9 7.07999 21.92 7.13998 21.94 7.19997L21.94 7.2C21.96 7.27 21.97 7.33 21.98 7.4C21.98 7.41392 21.9843 7.42785 21.9889 7.44277ZM8.42 13.5H18.78L19.78 8.5H7.42L8.42 13.5ZM9.59998 20.5C10.7045 20.5 11.6 19.6046 11.6 18.5C11.6 17.3954 10.7045 16.5 9.59998 16.5C8.49541 16.5 7.59998 17.3954 7.59998 18.5C7.59998 19.6046 8.49541 20.5 9.59998 20.5ZM17.6 20.5C18.7045 20.5 19.6 19.6046 19.6 18.5C19.6 17.3954 18.7045 16.5 17.6 16.5C16.4954 16.5 15.6 17.3954 15.6 18.5C15.6 19.6046 16.4954 20.5 17.6 20.5Z" fill="#ffffff"/></svg></a></li>
+                        <li class="header__item"><a href="#" class="header__link snipcart-customer-signin">Login</a></li>
+                        <li class="header__item"><a href="#" class="btn btn--primary snipcart-checkout"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21.9889 7.44277C21.9943 7.46 22 7.47856 22 7.5C22 7.51392 21.9957 7.52785 21.9911 7.54277C21.9857 7.56 21.98 7.57856 21.98 7.6C21.98 7.60965 21.981 7.62035 21.9821 7.6314C21.9844 7.65471 21.9868 7.67965 21.98 7.7L20.58 14.7C20.49 15.16 20.08 15.5 19.6 15.5H7.6C7.12 15.5 6.71 15.16 6.62 14.7L4.78 5.5H3C2.45 5.5 2 5.05 2 4.5C2 3.95 2.45 3.5 3 3.5H5.6C6.08 3.5 6.49 3.84 6.58 4.3L7.02 6.5H21C21.0114 6.5 21.0228 6.5029 21.0348 6.50594C21.0543 6.51088 21.0752 6.51619 21.1 6.51C21.1097 6.51 21.1203 6.50896 21.1314 6.50789C21.1547 6.50564 21.1797 6.50322 21.2 6.51C21.215 6.515 21.23 6.5225 21.245 6.53C21.26 6.5375 21.275 6.545 21.29 6.55C21.36 6.57 21.42 6.6 21.48 6.63C21.53 6.66 21.58 6.69 21.63 6.73L21.63 6.73002C21.68 6.78001 21.72 6.82001 21.76 6.87C21.81 6.92 21.84 6.97 21.87 7.03C21.9 7.07999 21.92 7.13998 21.94 7.19997L21.94 7.2C21.96 7.27 21.97 7.33 21.98 7.4C21.98 7.41392 21.9843 7.42785 21.9889 7.44277ZM8.42 13.5H18.78L19.78 8.5H7.42L8.42 13.5ZM9.59998 20.5C10.7045 20.5 11.6 19.6046 11.6 18.5C11.6 17.3954 10.7045 16.5 9.59998 16.5C8.49541 16.5 7.59998 17.3954 7.59998 18.5C7.59998 19.6046 8.49541 20.5 9.59998 20.5ZM17.6 20.5C18.7045 20.5 19.6 19.6046 19.6 18.5C19.6 17.3954 18.7045 16.5 17.6 16.5C16.4954 16.5 15.6 17.3954 15.6 18.5C15.6 19.6046 16.4954 20.5 17.6 20.5Z" fill="#ffffff"/></svg>&nbsp;<span class="snipcart-items-count"></span></a></li>
                     </ul>
                 </div>
                 </nav>
@@ -142,8 +139,13 @@
             </div>
          </footer>
         </section>
+        <!-- scripts -->
+         <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+         <div hidden id="snipcart" data-api-key="M2MzMTliYTMtMzg1OC00NTZkLWIzZDYtMWRmOTNhYTZiNDlmNjM3MjQ1NjEwMDk0NjEzNzcy"></div>
+         <script async src="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.js"></script>
         <script>
             {% include "js/scripts.js" %}
         </script>
+        
     </body>
 </html>
